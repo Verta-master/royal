@@ -4,27 +4,13 @@ $('.menu__btn').click(function() {
   $('.menu__list').slideToggle();
 })
 
-if (window.innerWidth < 766) {
-  $('.menu__link').click(function() {
-    $('.menu__list').slideToggle();
-    $('.menu').removeClass('menu--opened');
-  })
-}
-
-//Scroll to top
+//Header
 $(window).scroll(function(){
   if ((window.pageYOffset || document.documentElement.scrollTop ||document.body.scrollTop) >= 100) {
-    $(".btn-top").fadeIn();
+    $('.header').addClass('header--scroll');
   } else {
-    $(".btn-top").fadeOut();
+    $('.header').removeClass('header--scroll');
   };
-});
-
-$(".btn-top").click(function () {
-  $("body,html").animate({
-    scrollTop: 0
-  }, 400);
-  return false;
 });
 
 //Scroll to menu anchor
@@ -45,7 +31,7 @@ $(document).ready(function () {
         menu = target;
     $target = $(target);
     $('html, body').stop().animate({
-        'scrollTop': $target.offset().top
+        'scrollTop': $target.offset().top  - 100
     }, 500, 'swing', function () {
         $(document).on("scroll", onScroll);
     });
