@@ -8,10 +8,21 @@ $('.menu__btn').click(function() {
 $(window).scroll(function(){
   if ((window.pageYOffset || document.documentElement.scrollTop ||document.body.scrollTop) >= 100) {
     $('.header').addClass('header--scroll');
+    $('.menu__list').slideUp();
+    $('.menu').addClass('menu--closed');
+    $('.menu').removeClass('menu--opened');
   } else {
     $('.header').removeClass('header--scroll');
   };
 });
+
+if (window.innerWidth < 1278) {
+  $('.menu__link').click(function() {
+    $('.menu__list').slideUp();
+    $('.menu').addClass('menu--closed');
+    $('.menu').removeClass('menu--opened');
+  })
+}
 
 //Scroll to menu anchor
 $(document).ready(function () {
