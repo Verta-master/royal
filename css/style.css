@@ -390,17 +390,6 @@ body {
   line-height: 27px;
   font-weight: 300;
   color: #888888;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 100vh;
-}
-.footer {
-  margin-top: auto;
 }
 img {
   max-width: 100%;
@@ -571,6 +560,12 @@ button {
 }
 .menu__btn {
   display: none;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/icon-menu-ham.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .menu__list {
   display: -webkit-box;
@@ -736,6 +731,7 @@ button {
 }
 .service__item p {
   margin: 0;
+  max-width: 100%;
 }
 .service__item .service__title {
   margin-top: 17px;
@@ -761,6 +757,8 @@ button {
   border: 2px dotted #cccccc;
 }
 .footer {
+  min-height: 50px;
+  overflow: hidden;
   background-color: #00a1ee;
   color: #fff;
   font-size: 14px;
@@ -857,4 +855,177 @@ button {
 .contacts__link:hover,
 .contacts__link:active {
   border-bottom: none;
+}
+@media (max-width: 1400px) {
+  .appartment__item {
+    height: 400px;
+  }
+  .appartment__item--left {
+    height: 800px;
+  }
+}
+@media (max-width: 1278px) {
+  .wrapper {
+    width: 100%;
+  }
+  .header {
+    padding: 20px;
+  }
+  .menu__btn {
+    display: block;
+  }
+  .menu--opened .menu__btn {
+    background-image: url(../img/icon-menu-cross.svg);
+    background-size: 25px 25px;
+  }
+  .menu__list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    background-color: #293858;
+  }
+  .menu__link {
+    display: block;
+    max-width: 200px;
+    padding: 10px 0;
+  }
+  .promo {
+    padding: 20px;
+  }
+  .hotel__img {
+    width: 45%;
+  }
+  .appartment__item {
+    height: 330px;
+  }
+  .appartment__item--left {
+    height: 660px;
+  }
+  .service__item {
+    width: 25%;
+  }
+  .contacts__info {
+    right: 20px;
+    left: auto;
+    padding: 25px;
+  }
+}
+@media (max-width: 1022px) {
+  .promo {
+    height: 500px;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .appartment__item {
+    height: 250px;
+  }
+  .appartment__item--left {
+    height: 500px;
+  }
+  .service__item {
+    width: 40%;
+    margin-bottom: 30px;
+  }
+  .service__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .contacts__map {
+    height: 400px;
+  }
+  .contacts__info {
+    position: static;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    padding: 10px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu {
+    margin-left: auto;
+  }
+  .header__user {
+    width: 100%;
+    margin-left: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header__login {
+    font-size: 14px;
+  }
+  .btn {
+    width: 150px;
+    height: 40px;
+  }
+  .promo {
+    padding: 10px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .promo__user {
+    bottom: 10px;
+    right: 10px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .hotel {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .hotel .title {
+    text-align: center;
+  }
+  .hotel__img {
+    float: none;
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+  }
+  .hotel__info {
+    text-align: left;
+  }
+  .appartment {
+    padding-top: 40px;
+  }
+  .appartment__item {
+    width: 100%;
+    height: auto;
+  }
+  .appartment__item--left {
+    float: none;
+  }
+  .service {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .service__item {
+    width: 1005px;
+  }
+  .contacts__info {
+    width: 100%;
+  }
 }
