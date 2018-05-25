@@ -622,16 +622,17 @@ button {
 }
 .title {
   margin-top: 0;
+  margin-bottom: 25px;
   color: #333333;
   text-transform: uppercase;
   font-size: 40px;
-  line-height: 1.5;
+  line-height: 1.2;
   font-weight: 500;
   text-align: center;
 }
 .hotel {
-  padding-top: 75px;
-  padding-bottom: 35px;
+  padding-top: 70px;
+  padding-bottom: 82px;
 }
 .hotel .title {
   text-align: left;
@@ -640,9 +641,13 @@ button {
   float: right;
   margin-bottom: 40px;
   margin-left: 40px;
+  margin-top: 10px;
 }
 .hotel__info {
   text-align: justify;
+}
+.hotel__btn {
+  margin-top: 30px;
 }
 .appartment {
   padding-top: 75px;
@@ -694,9 +699,10 @@ button {
 }
 .service {
   padding-top: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 73px;
 }
 .service__list {
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -773,17 +779,22 @@ button {
 }
 .contacts__map {
   height: 510px;
-  background-image: url(../../img/map.jpg);
+  background-image: url(../img/map.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.contacts__map iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
 }
 .contacts__info {
   width: 380px;
   padding: 45px;
   position: absolute;
   top: 50%;
-  left: calc(50% + 180px);
+  left: calc(50% + 178px);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 10;
@@ -794,6 +805,7 @@ button {
 }
 .contacts__title {
   margin-top: 0;
+  margin-bottom: 15px;
   font-size: 35px;
   line-height: 1.2;
   color: #333333;
@@ -801,7 +813,7 @@ button {
 }
 .contacts__icon {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   padding-left: 40px;
   position: relative;
   font-style: normal;
@@ -811,7 +823,7 @@ button {
   content: "";
   position: absolute;
   top: 5px;
-  left: 0;
+  left: 5px;
   background-repeat: no-repeat;
   background-size: contain;
 }
