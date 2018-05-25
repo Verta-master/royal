@@ -1,0 +1,88 @@
+.contacts {
+  position: relative;
+}
+
+.contacts__map {
+  height: 510px;
+  background-image: url(../../img/map.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contacts__info {
+  width: 380px;
+  padding: 45px;
+  position: absolute;
+  top: 50%;
+  left: ~"calc(50% + 180px)";
+  transform: translateY(-50%);
+  z-index: 10;
+  border-radius: 3px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 9px 41.71px 1.29px rgba(0, 0, 0, 0.29);
+}
+
+.contacts__title {
+  margin-top: 0;
+  font-size: 35px;
+  line-height: 1.2;
+  color: @dark;
+  text-align: center;
+}
+
+.contacts__icon {
+  display: block;
+  margin-bottom: 25px;
+  padding-left: 40px;
+  position: relative;
+  font-style: normal;
+  color: @dark;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  &--address::before {
+    width: 18px;
+    height: 22px;
+    background-image: url(../img/icon-pin.png);
+  }
+  
+  &--phone::before {
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/icon-phone.png);
+  }
+  
+  &--mail::before {
+    width: 19px;
+    height: 13px;
+    top: 7px;
+    background-image: url(../img/icon-email.png);
+  }
+}
+
+.contacts__icon--phone,
+.contacts__icon--mail {
+  &:hover,
+  &:active {
+    color: @blue;
+  }
+}
+
+.contacts__link {
+  margin-left: 40px;
+  color: @blue;
+  border-bottom: 1px dashed @blue;
+  
+  &:hover,
+  &:active {
+    border-bottom: none;
+  }
+}
